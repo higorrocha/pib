@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+		<% @liderancas.each do |lideranca| %>
+				<br>
+				<%= link_to lideranca do %>
+					<%= image_tag lideranca.image.url(:medium), class: "img-responsive" %>
+				<% end %>
+				<h3><a href="#"><%= link_to lideranca.title, lideranca %></a></h3>
+				<hr>
+		<% end %>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<% if user_signed_in? %>
+		<%= link_to "Criar novo profile", new_lideranca_path(@lideranca) %>
+	<% end %>
+
+

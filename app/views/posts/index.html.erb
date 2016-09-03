@@ -1,0 +1,19 @@
+<div class="container">
+	<h1>PIB News</h1>
+
+
+		<% @posts.each do |post| %>
+
+				<p><%= post.created_at.strftime('%A, %B %d') %></p>
+				<h2><a href="#"><%= link_to post.title, post %></a></h2>
+				<hr>
+
+		<% end %>
+
+	<%= will_paginate @posts %>
+
+	<br>
+	<br>
+	<% if user_signed_in? %>
+		<%= link_to "Criar novo post", new_post_path(@post) %>
+	<% end %>

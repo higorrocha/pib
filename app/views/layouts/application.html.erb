@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PIB Goiânia</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="https://use.fontawesome.com/6955255fc8.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Bootstrap Core JavaScript -->
+  <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to root_path, class: "navbar-brand" do %>
+                	<%= image_tag "pib.png", class: "logo-image" %>
+                <% end %>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+
+                    <li>
+                        <%= link_to "História", templates_historia_path %>
+                    </li>
+                    <li class="active">
+                        <%= link_to "Jesus Cristo", templates_jesus_path %>
+                    </li>
+                    <li>
+                        <%= link_to "Liderança", liderancas_path %>
+                    </li>
+                    <li>
+                        <%= link_to "Mensagens", messages_path %>
+                    </li>
+
+                    <li>
+                        <%= link_to "Contato", new_contato_path %>
+                    </li>
+                    <% if user_signed_in? %>
+                        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                    <% end %>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+		</div>
+	<!-- /.container -->
+	</nav>
+
+    <% if notice %>
+        <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+        <p class="alert"><%= alert %></p>
+    <% end %>
+
+<%= yield %>
+
+<!-- Related Projects Row -->
+        <div class="row">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr>
+            <div class="col-sm-3 col-xs-6">
+                <a href="#">
+                    <%= image_tag "juventude.jpg", class: "portfolio-item img-responsive" %>
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="#">
+                    <%= image_tag "dynamis.jpg", class: "portfolio-item img-responsive" %>
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="#">
+                    <%= image_tag "video.png", class: "portfolio-item img-responsive" %>
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="#">
+                    <%= image_tag "pray.jpg", class: "portfolio-item img-responsive" %>
+                </a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+            <div class="row">
+                <a href="" class="topo"><i class="fa fa-arrow-up fa-2x"></i></a>
+                <footer class="site-footer">
+
+                  <div class="wrapper">
+
+                    <h2 class="footer-heading">Primeira Igreja Batista em Goiânia</h2>
+
+                    <div class="footer-col-wrapper">
+                      <div class="footer-col footer-col-1">
+                        <ul class="contact-list">
+                          <li>Telefone:</li>
+                          <li><a href="tel:+62932231716">(62) 3223-1716</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="footer-col footer-col-2">
+                        <ul class="social-media-list">
+	                        <li>
+	                           <a href="https://www.facebook.com/Primeira-Igreja-Batista-em-Goiania_-Oficial-118054734997157/?ref=ts&fref=ts"> <i class="fa fa-facebook" aria-hidden="true"></i>  Facebook</a>
+	                        </li>
+	                        <li>
+	                           <a href="https://twitter.com/<pibgoinia></pibgoinia>"><i class="fa fa-twitter" aria-hidden="true"></i>  Twitter</a>
+	                        </li>
+	                        <li>
+	                          <a href="https://www.flickr.com/photos/pibgoiania/"><i class="fa fa-flickr" aria-hidden="true"></i> Flickr</a>
+	                        </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+            </div>
+        <!---->
+        <div class="company">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; <a href="https://www.99bemore.com.br/" target="_blank">99beMore</a> 2016</p>
+                </div>
+            </div>
+		</div>
+
+</body>
+</html>

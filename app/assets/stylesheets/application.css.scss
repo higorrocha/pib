@@ -1,0 +1,160 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'normalize';
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+a {
+    color: #8e888a;
+    text-decoration: none;
+    outline: none;
+}
+a:hover{
+    color: #8e888a;
+}
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+.company {
+    margin: 50px 0;
+}
+
+
+.logo-image{
+	width: 38px;
+	height: 38px;
+	margin-top: 8px;
+}
+
+
+@media screen and (min-width: 774px){
+    .navbar{
+    	height: 80px;
+    }
+
+
+
+    ul.nav.navbar-nav>li{
+    	margin-top: 15px;
+    	font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 779px){
+    .logo-image{
+    	width: 38px;
+    	height: 38px;
+    	margin-top: -10px;
+    }
+
+}
+
+.portfolio-item{
+    width: 500px;
+    height: 250px;
+}
+
+
+ .about-jesus p,
+ .history-pib p{
+     font-size: 19px;
+ }
+
+
+ hr{
+     border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+ }
+ .footer-heading {color:#828282; font-size: 25px; margin-bottom: 15px; letter-spacing: 4px; padding: 20px;}
+
+ .info-list, .contact-list, .social-media-list { list-style: none; margin-left: 0;  font-size: 15px;}
+ ul.social-media-list li { padding: 10px;}
+ ul.contact-list li { padding: 10px; }
+
+
+ .footer-col-wrapper { font-size: 15px; color: #828282; margin-left: -15px; }
+
+ .footer-col { float: left; margin-bottom: 15px; padding-left: 15px; }
+
+ .footer-col-1 { width: -webkit-calc(35% - (30px / 2)); width: calc(35% - (30px / 2)); }
+
+ .footer-col-2 { width: -webkit-calc(20% - (30px / 2)); width: calc(20% - (30px / 2)); }
+
+ .footer-col-3 { width: -webkit-calc(45% - (30px / 2)); width: calc(45% - (30px / 2)); }
+
+ @media screen and (max-width: 800px) {
+  .footer-col-1, .footer-col-2 {
+  	width: -webkit-calc(50% - (30px / 2));
+  	width: calc(50% - (30px / 2));
+  }
+
+  .footer-col-3 {
+   	width: -webkit-calc(100% - (30px / 2));
+    	width: calc(100% - (30px / 2));
+  }
+
+  .topo {
+  cursor: pointer;
+  position: fixed;
+  bottom: 3.5em;
+  right: 3.5em;
+  display: none;
+  z-index: 50;
+  background: rgba(0,0,0,0.6);
+  border-color: #fff;
+  border-radius: 2px solid;
+  color: #fff;
+  padding: 1em 2rem;
+
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;}
+}
+
+
+
+.topo {
+  cursor: pointer;
+  position: fixed;
+  bottom: 3.5em;
+  right: 3.5em;
+  display: none;
+  z-index: 50;
+  background: rgba(0,0,0,0.6);
+  border-color: #fff;
+  border-radius: 2px solid;
+  color: #fff;
+  padding: 1em 2rem;
+
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.notice, .alert {
+  margin-top: 3em;
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #E9E9E9;
+}
+
+@import 'pygments';

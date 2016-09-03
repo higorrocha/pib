@@ -1,0 +1,15 @@
+<div class="container">
+	<h2><%= @lideranca.title %></h2><br>
+	<div class="row">
+		<div class="col-md-8">
+			<%= image_tag @lideranca.image.url(:medium), class: "img-responsive" %>
+			<p><%= markdown @lideranca.content %></p>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<% if user_signed_in? %>
+		<%= link_to "Editar", edit_lideranca_path(@lideranca) %>
+		<%= link_to "Deletar", lideranca_path(@lideranca), method: :delete, data: { confirm: "Você tem certeza?" } %>
+	<% end %>

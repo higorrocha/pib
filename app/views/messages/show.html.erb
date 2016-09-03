@@ -1,0 +1,18 @@
+<div class="container">
+	<h2><%= @message.title %></h2><br>
+	<h6><%= @message.created_at.strftime('%A, %B %d') %></h6>
+	<div class="row">
+		<div class="col-md-6">
+			<%= image_tag @message.image.url(:medium), class: "img-responsive" %>
+		</div>
+		<div class="col-md-6 ">
+			<p><%= markdown @message.content %></p>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<% if user_signed_in? %>
+		<%= link_to "Editar", edit_message_path(@message) %>
+		<%= link_to "Deletar", message_path(@message), method: :delete, data: { confirm: "Você tem certeza?" } %>
+	<% end %>
